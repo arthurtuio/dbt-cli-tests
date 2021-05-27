@@ -33,6 +33,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   projeto_inicial_tuio:
-      # Applies to all files under models/example/
-      example:
+      staging:
+        jaffle_shop:
           materialized: view
+        stripe:
+          materialized: view
+      marts:
+        core:
+          materialized: table
+      # Applies to all files under models/example/
+#      example:
+#          materialized: view
