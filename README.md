@@ -19,6 +19,10 @@ por partes, por exemplo, uma tabela que é criada por meio de 2 CTEs, teríamos 
   - Isso permite os dois primeiros CTEs serem usados em outras tabelas/consolidaçoes
   - **Ou seja, modularizamos as regras de negócio**, e depois só agregamos elas em tabelas, 
     apenas referenciando os modelos anteriores
+    - E como posso escolher se crio tabelas ou views, posso fazer esses CTEs modularizados
+    com as regras de negócio, como views, e as tabelas que agregam eles, como tabelas.
+- Possibiliadde de criar documentação do projeto, com o comando `dbt docs`,
+super abstrata e prática
 
 ## Projetos desse repo
 - `projeto-inicial-tuio`: 
