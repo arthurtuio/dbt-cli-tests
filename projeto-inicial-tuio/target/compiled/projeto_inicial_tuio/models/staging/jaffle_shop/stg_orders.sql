@@ -3,4 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status
-from jaffle_shop.orders
+from "dev"."jaffle_shop"."orders"

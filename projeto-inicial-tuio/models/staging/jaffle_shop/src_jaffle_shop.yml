@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: a clone of a test application database
+    # database: raw  # no meu teste não citei o database nas tabelas
+    tables:
+      - name: customers
+        description: Raw customers data
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

@@ -11,6 +11,8 @@
 .sh pra mover ele pra home (ou dockerizar essa parte também)
 - Ainda nesse arquivo, nos campos opcionais, caso eles não forem usados, eles precisam
 ser comentados para não serem usados.
+- O DB em que o dbt vai se conectar precisa estar online para se realizar qualquer
+operação no dbt (`dbt docs generate`/`dbt run` e outros exemplos)
   
 ### Vantagens
 - Ao termos uma pasta para os modelos, conseguimos modularizar criações de tabelas
@@ -21,10 +23,13 @@ por partes, por exemplo, uma tabela que é criada por meio de 2 CTEs, teríamos 
     apenas referenciando os modelos anteriores
     - E como posso escolher se crio tabelas ou views, posso fazer esses CTEs modularizados
     com as regras de negócio, como views, e as tabelas que agregam eles, como tabelas.
-- Possibiliadde de criar documentação do projeto, com o comando `dbt docs`,
+- Possibiliadde de criar documentação do projeto, com o comando `dbt docs generate`,
 super abstrata e prática
+- Uso de uma templating language (jinja) fazendo com que você consiga definir,
+por exemplo, a origem das tabelas em um .yml e depois só referenciar nos outros lugares,
+simplificando na manutenção do código e também na hora de gerar a documentação
 
 ## Projetos desse repo
 - `projeto-inicial-tuio`: 
-    - Projeto em que exploro os recursos iniciais do DBT, já me conectando a um cluster redshift, 
-      e também a um banco local postgres
+    - Projeto em que exploro os recursos iniciais do DBT, já me conectando a um cluster redshift, usando
+  tabelas padroes do dbt
