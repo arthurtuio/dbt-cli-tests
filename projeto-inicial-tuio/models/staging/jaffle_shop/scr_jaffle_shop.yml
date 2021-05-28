@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    # database: raw  # no meu teste não citei o database nas tabelas
+    tables:
+      - name: customers
+      - name: orders
