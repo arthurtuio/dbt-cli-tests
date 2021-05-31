@@ -17,3 +17,13 @@ sources:
             description: Nome do aeroporto
             tests:
               - not_null
+          - name: version
+            description: Register Version
+            tests:
+#              - accepted_values:
+#                  - values: ['1.0']
+          - name: date
+            description: Date of register, format `YYYY-MM-DD`
+            tests:
+#              - accepted_values:
+#                  - values: ['Daily']

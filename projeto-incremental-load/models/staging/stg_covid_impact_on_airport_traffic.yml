@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_count_grouped_by_airport
+    description: Staged count of rows for each airport.
+    columns:
+      - name: airportname
+        description: The airport name, from the source table
+      - name: rows_count
+        description: The count of rows from that airport.
+
+
+#  - name: stg_orders
+#    description: Staged order data from our jaffle shop app.
+#    columns:
+#      - name: order_id
+#        description: Primary key for orders.
+#        tests:
+#          - unique
+#          - not_null
+#      - name: status
+#        description: "{{ doc('order_status') }}"
+#        tests:
+#          - accepted_values:
+#              values: ['completed', 'shipped', 'returned', 'placed'] # vai dar erro também, pra ver como é o erro
+#      - name: customer_id
+#        description: Foreign key to stg_customers.customer_id.
+#        tests:
+#          - relationships:
+#              to: ref('stg_customers')
+#              field: customer_id

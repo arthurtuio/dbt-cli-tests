@@ -6,6 +6,9 @@
   https://docs.getdbt.com/tutorial/create-a-project-dbt-cli
 - Pra criar o arquivo `~/.dbt/profiles.yml` com base no Redshift: 
   https://docs.getdbt.com/reference/warehouse-profiles/redshift-profile
+    - Se existir mais de uma pasta de projeto no computador, basta criar um
+  novo profile dentro do arquivo `~/.dbt/profiles.yml`, mudando os params
+  para o novo projeto
 - A grande quantidade de arquivos/pastas que ficam dentro de um projeto 
 na verdade foi criada de forma automatizada, na execução de comandos do dbt
   
