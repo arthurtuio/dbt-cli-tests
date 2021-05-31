@@ -2,9 +2,12 @@
 
 ### Tutoriais pra seguir:
 - Instalando a CLI: https://docs.getdbt.com/dbt-cli/installation
-- Criando um projeto e dando os primeiros steps: https://docs.getdbt.com/tutorial/create-a-project-dbt-cli
+- Criando um projeto e dando os primeiros steps: 
+  https://docs.getdbt.com/tutorial/create-a-project-dbt-cli
 - Pra criar o arquivo `~/.dbt/profiles.yml` com base no Redshift: 
   https://docs.getdbt.com/reference/warehouse-profiles/redshift-profile
+- A grande quantidade de arquivos/pastas que ficam dentro de um projeto 
+na verdade foi criada de forma automatizada, na execução de comandos do dbt
   
 ### Observacoes
 - O arquivo `profiles.yml` fica na pasta `~/.dbt`. Faz sentido deixar ele no repositorio, e criar um script
@@ -27,9 +30,24 @@ por partes, por exemplo, uma tabela que é criada por meio de 2 CTEs, teríamos 
 super abstrata e prática
 - Uso de uma templating language (jinja) fazendo com que você consiga definir,
 por exemplo, a origem das tabelas em um .yml e depois só referenciar nos outros lugares,
-simplificando na manutenção do código e também na hora de gerar a documentação
+simplificando na manutenção do código e também na hora de gerar a documentaçã
+- Ainda sobre templates, permite a criação de Macros, como se fossem métodos em Python,
+e também possui diversos pacotes já prontos, para Macros e Models.
+  - Particularmente, o pacote `dbt_utils` abstrai lógicas de SQL super úteis
+- Possui uma logica dedicada a questao de Deploy, permitindo que se planeje qualquer job
+do dbt, como `dbt run`. Talvez só dê pra fazer essa parte no DBT Cloud, 
+mas ainda sim é muito prático. Dá até pra fazer um full load dali, e talvez um partial
+- O DBT Cloud já se integra ao github, o que facilita bastante na hora da criacao de PRs
+- Já tem lógica criada para tabelas incrementais sem delete, apenas com insert
+  - E pra tabelas que ocorrem deletes, é possível também criar lógica pra capturar as
+  diferenças de delete/inset e fazer esse incremental
 
 ## Projetos desse repo
 - `projeto-inicial-tuio`: 
-    - Projeto em que exploro os recursos iniciais do DBT, já me conectando a um cluster redshift, usando
+  - Projeto em que exploro os recursos iniciais do DBT, já me conectando a um cluster redshift, usando
   tabelas padroes do dbt
+- `projeto-incremental-load`:
+  - Projeto onde testo incremental models, para analisar a viabilidade
+  da solução para tabelas do ContaAzul que possuem DELETES/UPDATES/INSERT.
+Nesse projeto foram usados CSVs do Kaggle.
+    

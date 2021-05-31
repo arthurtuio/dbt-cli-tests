@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: kaggle_covid_airport # schema
+    description: a clone of a test application database
+    # database: raw  # no meu teste não citei o database nas tabelas
+    tables:
+      - name: covid_impact_on_airport_traffic
+        description: Descricao daora
+        columns:
+#          - name: id
+#            description: Primary key
+#            tests:
+#              - unique
+#              - not_null
+          - name: airportname
+            description: Nome do aeroporto
+            tests:
+              - not_null
