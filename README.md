@@ -9,8 +9,6 @@
     - Se existir mais de uma pasta de projeto no computador, basta criar um
   novo profile dentro do arquivo `~/.dbt/profiles.yml`, mudando os params
   para o novo projeto
-- A grande quantidade de arquivos/pastas que ficam dentro de um projeto 
-na verdade foi criada de forma automatizada, na execução de comandos do dbt
   
 ### Observacoes
 - O arquivo `profiles.yml` fica na pasta `~/.dbt`. Faz sentido deixar ele no repositorio, e criar um script
@@ -19,6 +17,8 @@ na verdade foi criada de forma automatizada, na execução de comandos do dbt
 ser comentados para não serem usados.
 - O DB em que o dbt vai se conectar precisa estar online para se realizar qualquer
 operação no dbt (`dbt docs generate`/`dbt run` e outros exemplos)
+- A grande quantidade de arquivos/pastas que ficam dentro de um projeto 
+na verdade foi criada de forma automatizada, na execução de comandos do dbt
   
 ### Vantagens
 - Ao termos uma pasta para os modelos, conseguimos modularizar criações de tabelas
