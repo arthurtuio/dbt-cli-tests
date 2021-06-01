@@ -35,4 +35,7 @@ models:
   projeto_incremental_load:
       # Applies to all files under models/example/
       staging:
-          # covid_impact_on_airport_traffic: table  # nao preciso dessa porque é o source
+        jaffle_shop:  # pasta
+          materialized: view
+      marts:
+        materialized: table
