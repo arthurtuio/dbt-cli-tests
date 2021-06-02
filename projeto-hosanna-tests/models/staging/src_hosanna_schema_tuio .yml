@@ -1,0 +1,32 @@
+# Arquivo onde é declarado o Schema, e as tabelas presentes nele
+# Funciona como Source, isto é, o ponto de partida das Transformaçoes/Consolidações
+
+version: 2
+
+sources:
+  - name: hosanna_schema_tuio
+    description: a clone of a test application database
+    # database: raw  # no meu teste não citei o database nas tabelas
+    tables:
+      - name: easy_core_contatos_ctrl
+        description: Descricao daora easy_core_contatos_hist
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+      - name: easy_core_contatos_hist
+        description: Descricao daora easy_core_contatos_hist
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: easy_disc_mailing_new_list
+        description: Descricao daora easy_disc_mailing_new_list
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

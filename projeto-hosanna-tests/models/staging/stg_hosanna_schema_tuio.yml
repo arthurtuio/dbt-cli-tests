@@ -1,0 +1,42 @@
+# Arquivo onde são declaradas as tabelas/views/ephemerals de Staging, que geralmente são CTEs
+# Funciona como Staging, isto é, a parte intermediária entre o Source e as tabelas transformadas
+
+# Aqui são declarados os arquivos .sql presentes nessa pasta
+
+version: 2
+
+models:
+  - name: stg_BASE_DE_TMA_E_QUANTIDADE_DE_LIGAÇÕES
+    description: Quase o código da DAG citada no readme, das linhas 45 a 56
+    columns:
+      - name: metric_date
+        description: A data que a métrica ocorreu, do tipo texto
+        tests:
+          - not_null
+      - name: email
+        description: Email da pessoa, anonimizado
+        tests:
+          - not_null
+      - name: tempo_falado
+        description: Tempo falado
+      # nao preciso descrever todas as colunas
+
+#  - name: stg_orders
+#    description: Staged order data from our jaffle shop app.
+#    columns:
+#      - name: order_id
+#        description: Primary key for orders.
+#        tests:
+#          - unique
+#          - not_null
+#      - name: status
+#        description: "{{ doc('order_status') }}"
+#        tests:
+#          - accepted_values:
+#              values: ['completed', 'shipped', 'returned', 'placed'] # vai dar erro também, pra ver como é o erro
+#      - name: customer_id
+#        description: Foreign key to stg_customers.customer_id.
+#        tests:
+#          - relationships:
+#              to: ref('stg_customers')
+#              field: customer_id

@@ -2,14 +2,11 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
-Try running the following commands:
-- dbt run
-- dbt test
+### Objetivo
+Trazer uma nova perspectiva para a consolidação de algumas tabelas do Hosanna,
+que fazem parte da DAG 
+https://github.com/ContaAzul/airflow_ca/blob/master/dags/customer/service_metrics/base_hourly_dags/bridge_sumarize_service_px_calls_1_dag.py
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Tabelas do Hosanna Usadas
+Conferir o arquivo `models/staging/src_hosanna_schema_tuio.yml`
+- Tabelas foram anonimizadas
