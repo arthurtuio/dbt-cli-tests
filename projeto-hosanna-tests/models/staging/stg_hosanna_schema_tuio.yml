@@ -6,19 +6,19 @@
 version: 2
 
 models:
-  - name: stg_BASE_DE_TMA_E_QUANTIDADE_DE_LIGAÇÕES
+  - name: stg_base_de_tma_e_qtde_de_ligacoes
     description: Quase o código da DAG citada no readme, das linhas 45 a 56
-    columns:
-      - name: metric_date
-        description: A data que a métrica ocorreu, do tipo texto
-        tests:
-          - not_null
-      - name: email
-        description: Email da pessoa, anonimizado
-        tests:
-          - not_null
-      - name: tempo_falado
-        description: Tempo falado
+#    columns:
+#      - name: metric_date
+#        description: A data que a métrica ocorreu, do tipo texto
+#        tests:
+#          - not_null
+#      - name: email
+#        description: Email da pessoa, anonimizado
+#        tests:
+#          - not_null
+#      - name: tempo_falado
+#        description: Tempo falado
       # nao preciso descrever todas as colunas
 
 #  - name: stg_orders

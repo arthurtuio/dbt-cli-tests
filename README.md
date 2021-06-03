@@ -43,7 +43,16 @@ mas ainda sim é muito prático. Dá até pra fazer um full load dali, e talvez 
 - O DBT Cloud já se integra ao github, o que facilita bastante na hora da criacao de PRs
 - Já tem lógica criada para tabelas incrementais sem delete, apenas com insert
   - E pra tabelas que ocorrem deletes, é possível também criar lógica pra capturar as
-  diferenças de delete/inset e fazer esse incremental
+  diferenças de delete/inset e fazer esse incrementa
+- Snapshots: Permitem você criar snapshots de alguma tabela, com uma configuração
+super simples e abstrata, o que permite trackear updates em registros
+- Possui a pasta logs, que captura toda a execução do programa, fazendo assim ser possível
+debuggar qual foi o erro que aconteceu
+  
+- Sobre o uso de tabelas externas, que vem do S3 através do Redshift Spectrum,
+criar novas tabelas (staging, e final), o dbt se quebra todo ao rodar. Por isso, 
+parece que a solução é usar o pacote
+[dbt-external-tables](https://github.com/fishtown-analytics/dbt-external-tables)
 
 ## Projetos desse repo
 - `projeto-inicial-tuio`: 
