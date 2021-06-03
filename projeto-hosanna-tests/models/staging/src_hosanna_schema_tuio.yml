@@ -10,8 +10,8 @@ sources:
     tables:
       - name: easy_core_contatos_ctrl
         description: Descricao daora easy_core_contatos_hist
-        external:
-          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_core_contatos_ctrl/'
+#        external:
+#          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_core_contatos_ctrl/'
         columns:
           - name: id
             description: Primary key
@@ -20,8 +20,8 @@ sources:
               - not_null
       - name: easy_core_contatos_hist
         description: Descricao daora easy_core_contatos_hist
-        external:
-          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_core_contatos_hist/'
+#        external:
+#          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_core_contatos_hist/'
         columns:
           - name: id
             tests:
@@ -29,8 +29,8 @@ sources:
               - not_null
       - name: easy_disc_mailing_new_list
         description: Descricao daora easy_disc_mailing_new_list
-        external:
-          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_disc_mailing_new_list/'
+#        external:
+#          location: 's3://redshift-database-demo-tuio/parquet/hosanna-data-anonimizada/easy_disc_mailing_new_list/'
         columns:
           - name: id
             tests:
