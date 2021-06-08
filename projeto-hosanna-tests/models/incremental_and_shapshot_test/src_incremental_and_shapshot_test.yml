@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: incremental_and_shapshot_test
+    description: Schema criado para realizar testes de snapshot e incremental load usando o DBT Cloud.
+    # database: raw  # no meu teste não citei o database nas tabelas
+    tables:
+      - name: governors_county_candidate
+        description: Tabela base dos testes. Todas as colunas são do tipo `text`
+        columns:
+          - name: state
+          - name: county
+          - name: candidate
+          - name: party
+          - name: votes
+          - name: won
+
+      - name: governors_county_candidate_with_dates_columns
+        description: A mesma tabela de cima POREM com 2 colunas a mais, created_at e updated_at, tambem `text`
+        columns:
+          - name: state
+          - name: county
+          - name: candidate
+          - name: party
+          - name: votes
+          - name: won
+          - name: created_at
+          - name: updated_at
