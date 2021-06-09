@@ -1,3 +1,5 @@
 packages:
   - package: fishtown-analytics/dbt_external_tables
     version: 0.6.3
+  - package: fishtown-analytics/dbt_utils
+    version: 0.6.3

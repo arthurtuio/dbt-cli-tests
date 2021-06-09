@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_county_party_votes_count_incremental
+    description: contagem de votos agrupados por county e party, usando como tabela base a que possui date columns
+    columns:
+      - name: county
+      - name: party
+      - name: total_votes
+        description: sum(votes)

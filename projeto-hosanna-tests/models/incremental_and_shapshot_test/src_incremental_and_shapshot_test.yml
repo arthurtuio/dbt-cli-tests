@@ -3,10 +3,11 @@ version: 2
 sources:
   - name: incremental_and_shapshot_test
     description: Schema criado para realizar testes de snapshot e incremental load usando o DBT Cloud.
-    # database: raw  # no meu teste não citei o database nas tabelas
+    # database: raw  # nao precisa citar de novo porque já é o mesmo do definido no profile
     tables:
       - name: governors_county_candidate
         description: Tabela base dos testes. Todas as colunas são do tipo `text`
+        # loaded_at_field:  # Não existe coluna de data aqui
         columns:
           - name: state
           - name: county
@@ -17,6 +18,7 @@ sources:
 
       - name: governors_county_candidate_with_dates_columns
         description: A mesma tabela de cima POREM com 2 colunas a mais, created_at e updated_at, tambem `text`
+        loaded_at_field: updated_at
         columns:
           - name: state
           - name: county
